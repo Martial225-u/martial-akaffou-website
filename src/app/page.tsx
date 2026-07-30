@@ -10,6 +10,7 @@ import {
   FaEnvelope,
   FaGlobe,
 } from "react-icons/fa";
+import { Mail, Phone, MapPin, MessageCircle } from "lucide-react";
 import Navbar from "./components/Navbar";
 import ServiceCard from "./components/ServiceCard";
 import ProjectCard from "./components/ProjectCard";
@@ -29,33 +30,36 @@ const sendEmail = (e: FormEvent) => {
   if (!form.current) return;
 
   emailjs
-    .sendForm(
-      "service_1i64jnl",
-      "template_261bdac",
-      form.current,
-      {
-        publicKey: "ZbPh5CSzwhsgceblt",
-      }
-    )
-   .then(
-  () => {
-    alert("Message envoyé avec succès !");
-  },
-  (error) => {
-    console.log("Erreur EmailJS :", error);
-    alert("Erreur : " + error.text);
+ .sendForm(
+  "service_rjag7lv",
+  "template_261bdac",
+  form.current,
+  {
+    publicKey: "ZbPh5CSzwhsgceblt",
   }
-);
-};
-  return (
-    <main
-suppressHydrationWarning
-className="min-h-screen bg-slate-950 text-white"
->
+)
+    .then(
+      () => {
+        alert("Message envoyé avec succès !");
+        form.current?.reset();
+      },
+      (error) => {
+        console.log("Erreur EmailJS :", error);
+        alert("Erreur : " + error.text);
+      }
+    );
+}; // ← cette accolade ferme sendEmail
+
+
+return (
+  <main
+    suppressHydrationWarning
+    className="min-h-screen bg-slate-950 text-white"
+  >
 
       <Navbar />
       
-      <section className="relative flex min-h-[85vh] flex-col items-center justify-center overflow-hidden px-6 pt-28 text-center">
+       className="relative flex min-h-[85vh] flex-col items-center justify-center overflow-hidden px-6 pt-28 text-center"
 
        <motion.div
   animate={{
@@ -70,9 +74,7 @@ className="min-h-screen bg-slate-950 text-white"
   className="absolute h-96 w-96 rounded-full bg-cyan-500/20 blur-3xl"
 />
 
-        <div className="relative z-10">
-
-          <div className="mb-8">
+        <div className="relative z-10 mb-8">
             <motion.div
               initial={{ opacity: 0, scale: 0.5 }}
               animate={{
@@ -138,40 +140,35 @@ className="rounded-full mx-auto border-4 border-cyan-400 shadow-xl object-cover"
   la gestion de projets innovants.
 </motion.p>
 
-          <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
-            <a
-              href="/CV-Martial-Akaffou.pdf"
-              download
-            className="rounded-full bg-white px-8 py-3 font-bold text-slate-950 transition duration-300 hover:scale-105 hover:shadow-2xl"
-            >
-              Télécharger mon CV
-            </a>
-
-            <a
-              href="#services"
-              className="rounded-full bg-white px-8 py-3 font-bold text-slate-950 transition duration-300 hover:scale-105 hover:shadow-2xl"
-            >
-              Découvrir mes services
-            </a>
-
-            <a
-              href="#contact"
-             className="rounded-full border border-cyan-400 px-8 py-3 font-bold text-cyan-400 transition duration-300 hover:scale-105 hover:bg-cyan-400 hover:text-slate-950 hover:shadow-2xl"
-            >
-              <a
-  href="/cv/CV-Martial-Akaffou.pdf"
+        <div className="mt-8 flex flex-wrap justify-center gap-4">
+<a
+  href="http://localhost:3000/CV-Martial-Akaffou.pdf"
   target="_blank"
-  className="rounded-full bg-cyan-500 px-8 py-3 font-bold text-slate-950 transition hover:scale-105 hover:shadow-xl"
+  rel="noopener noreferrer"
+  className="rounded-full bg-cyan-500 px-8 py-3 font-bold text-slate-950 transition hover:bg-cyan-400"
 >
   Télécharger mon CV
 </a>
-              Me contacter
-            </a>
-          </div>
 
-        </div>
+  <a
+    href="#services"
+    className="rounded-full border border-cyan-400 px-8 py-3 font-bold text-cyan-400 transition hover:bg-cyan-400 hover:text-slate-950"
+  >
+    Découvrir mes services
+  </a>
 
-      </section>
+  <a
+    href="#contact"
+    className="rounded-full border border-cyan-400 px-8 py-3 font-bold text-cyan-400 transition hover:bg-cyan-400 hover:text-slate-950"
+  >
+    Me contacter
+  </a>
+
+</div>
+
+
+
+      <section>
 
       {/* A PROPOS */}
 
@@ -1008,118 +1005,65 @@ description="Accompagnement des organisations vers les solutions numériques."
 
       <Testimonials />
     
-      {/* CONTACT PREMIUM */}
+     {/* Informations Contact */}
 
-<FadeIn>
+<div className="space-y-6">
 
-  <section
-    id="contact"
-    className="bg-slate-950 px-6 py-24"
-  >
+  <div className="flex items-center gap-4 rounded-2xl border border-cyan-500/20 bg-slate-900 p-6">
+    <Mail className="h-8 w-8 text-cyan-400" />
 
-    <div className="mx-auto max-w-6xl">
+    <div>
+      <h3 className="text-lg font-semibold text-white">
+        Email
+      </h3>
 
-      <h2 className="text-center text-4xl font-bold text-cyan-400">
-        Contactez-moi
-      </h2>
-
-      <p className="mx-auto mt-6 max-w-3xl text-center text-lg text-gray-300">
-        Vous avez un projet digital, une formation ou une collaboration ?
-        Échangeons ensemble pour transformer vos idées en solutions concrètes.
+      <p className="text-gray-300">
+        akaffoumartial148@gmail.com
       </p>
+    </div>
+  </div>
 
 
-      <div className="mt-12 grid gap-10 md:grid-cols-2">
+  <div className="flex items-center gap-4 rounded-2xl border border-cyan-500/20 bg-slate-900 p-6">
+    <Phone className="h-8 w-8 text-cyan-400" />
 
-        {/* Informations */}
+    <div>
+      <h3 className="text-lg font-semibold text-white">
+        Téléphone
+      </h3>
 
-        <div className="rounded-3xl border border-cyan-500/20 bg-slate-900 p-8 shadow-xl">
-
-          <h3 className="text-2xl font-bold text-cyan-400">
-            Mes coordonnées
-          </h3>
-
-
-          <div className="mt-8 space-y-6 text-gray-300">
-
-
-            <p className="flex items-start gap-3">
-              <FaPhoneAlt className="mt-1 text-cyan-400" />
-
-              <span>
-                <strong>Téléphone :</strong>
-                <br />
-                +225 07 59 21 23 22
-              </span>
-            </p>
+      <p className="text-gray-300">
+        +225 07 59 21 23 22
+      </p>
+    </div>
+  </div>
 
 
-            <p className="flex items-start gap-3">
-              <FaEnvelope className="mt-1 text-cyan-400" />
+  <div className="flex items-center gap-4 rounded-2xl border border-cyan-500/20 bg-slate-900 p-6">
+    <MapPin className="h-8 w-8 text-cyan-400" />
 
-              <span>
-                <strong>Email :</strong>
-                <br />
-                akaffoumartial148@gmail.com
-              </span>
-            </p>
+    <div>
+      <h3 className="text-lg font-semibold text-white">
+        Localisation
+      </h3>
 
-
-            <p className="flex items-start gap-3">
-              <FaWhatsapp className="mt-1 text-green-500" />
-
-              <span>
-                <strong>WhatsApp :</strong>
-                <br />
-                Disponible pour vos projets
-              </span>
-            </p>
+      <p className="text-gray-300">
+        Abidjan, Côte d'Ivoire
+      </p>
+    </div>
+  </div>
 
 
-            <p className="flex items-start gap-3">
-              <FaLinkedin className="mt-1 text-cyan-400" />
+  <a
+    href="https://wa.me/2250759212322"
+    target="_blank"
+    className="flex items-center justify-center gap-3 rounded-xl bg-green-500 px-6 py-4 font-semibold text-white transition hover:bg-green-400"
+  >
+    <MessageCircle className="h-6 w-6" />
+    Me contacter sur WhatsApp
+  </a>
 
-              <a
-                href="https://www.linkedin.com/in/akaffou-yao-022189262"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:underline"
-              >
-                Mon profil LinkedIn
-              </a>
-            </p>
-
-
-            <p className="flex items-start gap-3">
-              <FaFacebook className="mt-1 text-cyan-400" />
-
-              <a
-                href="https://www.facebook.com/akaffou.jesusmartial"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:underline"
-              >
-                Ma page Facebook
-              </a>
-            </p>
-
-
-          </div>
-
-
-          <a
-            href="https://wa.me/2250759212322"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-8 inline-block rounded-full bg-green-500 px-8 py-3 font-bold text-white transition hover:scale-105"
-          >
-            Discuter sur WhatsApp
-          </a>
-
-
-        </div>
-
-
+</div>
 
 
 
@@ -1186,23 +1130,19 @@ description="Accompagnement des organisations vers les solutions numériques."
 </form>
 
 
-              </div>
-
-
-
-            </div>
+            
 
           </div>
 
 
         </section>
 
-     </FadeIn>
+     
      
 
- className="bg-slate-950 py-12"
 
-   "className="mx-auto max-w-6xl"
+
+  
 
     <div className="mt-10 grid gap-6 md:grid-cols-3">
 
@@ -1227,29 +1167,8 @@ description="Accompagnement des organisations vers les solutions numériques."
 
     </div>
 
-    <div className="mt-8 flex justify-center gap-6">
+    
 
-      <a
-        href="https://www.linkedin.com/in/akaffou-yao-022189262"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="rounded-full bg-slate-900 p-4 text-gray-400 transition hover:bg-cyan-500 hover:text-white"
-      >
-        <FaLinkedin size={32} />
-      </a>
-
-      <a
-        href="https://www.facebook.com/akaffou.jesusmartial"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="rounded-full bg-slate-900 p-4 text-gray-400 transition hover:bg-cyan-500 hover:text-white"
-      >
-        <FaFacebook size={32} />
-      </a>
-
-     
-
-</div>
 
 {/* Pied de page */}
 

@@ -12,7 +12,21 @@ export default function CV() {
           Yao Akaffou Jésus Martial
         </p>
 
+<div className="mt-6 text-center text-gray-300 space-y-2">
+  <p>📞 +225 07 59 21 23 22</p>
+  <p>📧 akaffoumartial148@gmail.com</p>
+  <p>📍 Abidjan, Côte d'Ivoire</p>
+  <p>🌐 www.linkedin.com/in/akaffou-yao-022189262</p>
+</div>
+<section className="mt-8 rounded-3xl bg-slate-900 p-8">
+  <h2 className="text-3xl font-bold text-cyan-400">
+    Références
+  </h2>
 
+  <p className="mt-5 text-gray-300">
+    Disponibles sur demande.
+  </p>
+</section>
         {/* Profil */}
 
         <section className="mt-12 rounded-3xl bg-slate-900 p-8">
@@ -22,13 +36,8 @@ export default function CV() {
           </h2>
 
           <p className="mt-5 text-gray-300 leading-relaxed">
-
-            Digital Marketer | Project Manager | Fintech Engineer | Evangeliste.
-
-            Passionné par la transformation digitale, la formation,
-            l'innovation technologique et le développement des compétences.
-
-          </p>
+  Digital Marketer, Project Manager, spécialiste en transformation digitale et innovation Fintech. Passionné par le développement des compétences, le marketing numérique, la gestion de projets et la formation. J'accompagne les entreprises, organisations et particuliers dans leur croissance grâce à des solutions digitales innovantes.
+</p>
 
         </section>
 
@@ -141,6 +150,16 @@ export default function CV() {
           </div>
 
         </section>
+        <section className="mt-8 rounded-3xl bg-slate-900 p-8">
+  <h2 className="text-3xl font-bold text-cyan-400">
+    Langues
+  </h2>
+
+  <ul className="mt-5 space-y-3 text-gray-300">
+    <li>🇫🇷 Français : Courant</li>
+    <li>🇬🇧 Anglais : Professionnel</li>
+  </ul>
+</section>
 
 
       </div>
