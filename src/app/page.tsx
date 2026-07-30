@@ -1242,9 +1242,59 @@ description="Accompagnement des organisations vers les solutions numériques."
 
      
 
-</FadeIn>
+</div>
 
 {/* Pied de page */}
+
+<footer className="bg-slate-950 border-t border-cyan-500/20 py-12">
+
+  <div className="mx-auto max-w-6xl px-6">
+
+    <div className="flex justify-center gap-6">
+
+      <a
+        href="https://www.linkedin.com/in/akaffou-yao-022189262"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="LinkedIn"
+        className="rounded-full bg-slate-900 p-4 text-gray-400 transition hover:bg-cyan-500 hover:text-white"
+      >
+        <FaLinkedin size={30} />
+      </a>
+
+
+      <a
+        href="https://www.facebook.com/akaffou.jesusmartial"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Facebook"
+        className="rounded-full bg-slate-900 p-4 text-gray-400 transition hover:bg-blue-600 hover:text-white"
+      >
+        <FaFacebook size={30} />
+      </a>
+
+
+      <a
+        href="https://wa.me/2250759212322"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="WhatsApp"
+        className="rounded-full bg-slate-900 p-4 text-gray-400 transition hover:bg-green-500 hover:text-white"
+      >
+        <FaWhatsapp size={30} />
+      </a>
+
+    </div>
+
+
+    <p className="mt-8 text-center text-sm text-gray-500">
+      © 2026 Martial Akaffou. Tous droits réservés.
+    </p>
+
+  </div>
+
+</footer>
+
 
 
 
