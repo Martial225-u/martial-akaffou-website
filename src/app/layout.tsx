@@ -15,6 +15,14 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://martialakaffou.com" ),
     openGraph: {
+      images: [
+  {
+    url: "/images/martial.jpg",
+    width: 800,
+    height: 800,
+    alt: "Martial Akaffou",
+  },
+],
     title:
       "Martial Akaffou | Digital Marketer - Project Manager - Fintech Engineer",
     description:
@@ -24,10 +32,10 @@ export const metadata: Metadata = {
     locale: "fr_FR",
     type: "website",
   },
-  title: "Martial Akaffou | Digital Marketer | Project Manager | Fintech Engineer",
+ title: "Martial Akaffou | Digital Marketer, Project Manager & Fintech Engineer",
 
   description:
-    "Site officiel de Martial Akaffou. Digital Marketer, Project Manager, Fintech Engineer et Évangéliste. Accompagnement en transformation digitale, formation et innovation.",
+    "Découvrez Martial Akaffou, Digital Marketer, Project Manager et Fintech Engineer. Expert en transformation digitale, gestion de projets, formation et innovation technologique.",
 
   icons: {
     icon: "/favicon.png",
