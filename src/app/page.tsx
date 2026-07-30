@@ -158,6 +158,13 @@ className="rounded-full mx-auto border-4 border-cyan-400 shadow-xl object-cover"
               href="#contact"
              className="rounded-full border border-cyan-400 px-8 py-3 font-bold text-cyan-400 transition duration-300 hover:scale-105 hover:bg-cyan-400 hover:text-slate-950 hover:shadow-2xl"
             >
+              <a
+  href="/cv/CV-Martial-Akaffou.pdf"
+  target="_blank"
+  className="rounded-full bg-cyan-500 px-8 py-3 font-bold text-slate-950 transition hover:scale-105 hover:shadow-xl"
+>
+  Télécharger mon CV
+</a>
               Me contacter
             </a>
           </div>
