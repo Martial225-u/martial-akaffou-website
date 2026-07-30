@@ -1050,11 +1050,15 @@ description="Accompagnement des organisations vers les solutions numériques."
 
 
                   <p>
-                    💬 <span className="font-semibold">WhatsApp :</span>
+                    💬 <span className="font-semibold">WhatsApp :</span> rel="noopener noreferrer"
                     <br />
                     Disponible pour vos projets
                   </p>
-
+<p>
+  💬 <span className="font-semibold">WhatsApp :</span>
+  <br />
+  Disponible pour vos projets
+</p>
 
                 </div>
 
