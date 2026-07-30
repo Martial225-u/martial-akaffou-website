@@ -32,8 +32,6 @@ export const metadata: Metadata = {
     locale: "fr_FR",
     type: "website",
   },
- title: "Martial Akaffou | Digital Marketer, Project Manager & Fintech Engineer",
-
   description:
     "Découvrez Martial Akaffou, Digital Marketer, Project Manager et Fintech Engineer. Expert en transformation digitale, gestion de projets, formation et innovation technologique.",
 
