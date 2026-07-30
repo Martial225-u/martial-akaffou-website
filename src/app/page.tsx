@@ -2,7 +2,14 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { FaFacebook, FaWhatsapp, FaLinkedin } from "react-icons/fa6";
+import {
+  FaWhatsapp,
+  FaLinkedin,
+  FaFacebook,
+  FaPhoneAlt,
+  FaEnvelope,
+  FaGlobe,
+} from "react-icons/fa";
 import Navbar from "./components/Navbar";
 import ServiceCard from "./components/ServiceCard";
 import ProjectCard from "./components/ProjectCard";
@@ -996,89 +1003,121 @@ description="Accompagnement des organisations vers les solutions numériques."
     
       {/* CONTACT PREMIUM */}
 
-      <FadeIn>
+<FadeIn>
 
-        <section
-          id="contact"
-          className="bg-slate-950 px-6 py-24"
-        >
+  <section
+    id="contact"
+    className="bg-slate-950 px-6 py-24"
+  >
 
-          <div className="mx-auto max-w-6xl">
+    <div className="mx-auto max-w-6xl">
+
+      <h2 className="text-center text-4xl font-bold text-cyan-400">
+        Contactez-moi
+      </h2>
+
+      <p className="mx-auto mt-6 max-w-3xl text-center text-lg text-gray-300">
+        Vous avez un projet digital, une formation ou une collaboration ?
+        Échangeons ensemble pour transformer vos idées en solutions concrètes.
+      </p>
 
 
-            <h2 className="text-center text-4xl font-bold text-cyan-400">
-              Contactez-moi
-            </h2>
+      <div className="mt-12 grid gap-10 md:grid-cols-2">
+
+        {/* Informations */}
+
+        <div className="rounded-3xl border border-cyan-500/20 bg-slate-900 p-8 shadow-xl">
+
+          <h3 className="text-2xl font-bold text-cyan-400">
+            Mes coordonnées
+          </h3>
 
 
-            <p className="mx-auto mt-6 max-w-3xl text-center text-lg text-gray-300">
-              Vous avez un projet digital, une formation ou une collaboration ?
-              Échangeons ensemble pour transformer vos idées en solutions concrètes.
+          <div className="mt-8 space-y-6 text-gray-300">
+
+
+            <p className="flex items-start gap-3">
+              <FaPhoneAlt className="mt-1 text-cyan-400" />
+
+              <span>
+                <strong>Téléphone :</strong>
+                <br />
+                +225 07 59 21 23 22
+              </span>
             </p>
 
 
+            <p className="flex items-start gap-3">
+              <FaEnvelope className="mt-1 text-cyan-400" />
 
-            <div className="mt-12 grid gap-10 md:grid-cols-2">
-
-
-
-              {/* Informations */}
-
-              <div className="rounded-3xl border border-cyan-500/20 bg-slate-900 p-8 shadow-xl">
-
-
-                <h3 className="text-2xl font-bold text-cyan-400">
-                  Mes coordonnées
-                </h3>
+              <span>
+                <strong>Email :</strong>
+                <br />
+                akaffoumartial148@gmail.com
+              </span>
+            </p>
 
 
-                <div className="mt-8 space-y-6 text-gray-300">
+            <p className="flex items-start gap-3">
+              <FaWhatsapp className="mt-1 text-green-500" />
+
+              <span>
+                <strong>WhatsApp :</strong>
+                <br />
+                Disponible pour vos projets
+              </span>
+            </p>
 
 
-                  <p>
-                    📞 <span className="font-semibold">Téléphone :</span>
-                    <br />
-                    +225 07 59 21 23 22
-                  </p>
+            <p className="flex items-start gap-3">
+              <FaLinkedin className="mt-1 text-cyan-400" />
+
+              <a
+                href="https://www.linkedin.com/in/akaffou-yao-022189262"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:underline"
+              >
+                Mon profil LinkedIn
+              </a>
+            </p>
 
 
-                  <p>
-                    📧 <span className="font-semibold">Email :</span>
-                    <br />
-                    akaffoumartial148@gmail.com
-                  </p>
+            <p className="flex items-start gap-3">
+              <FaFacebook className="mt-1 text-cyan-400" />
+
+              <a
+                href="https://www.facebook.com/akaffou.jesusmartial"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:underline"
+              >
+                Ma page Facebook
+              </a>
+            </p>
 
 
-                  <p>
-                    💬 <span className="font-semibold">WhatsApp :</span> rel="noopener noreferrer"
-                    <br />
-                    Disponible pour vos projets
-                  </p>
-<p>
-  💬 <span className="font-semibold">WhatsApp :</span>
-  <br />
-  Disponible pour vos projets
-</p>
-
-                </div>
+          </div>
 
 
-                <a
-                  href="https://wa.me/2250759212322"
-                  target="_blank"
-                  className="mt-8 inline-block rounded-full bg-green-500 px-8 py-3 font-bold text-white transition hover:scale-105"
-                >
-                  Discuter sur WhatsApp
-                </a>
+          <a
+            href="https://wa.me/2250759212322"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-8 inline-block rounded-full bg-green-500 px-8 py-3 font-bold text-white transition hover:scale-105"
+          >
+            Discuter sur WhatsApp
+          </a>
 
 
-              </div>
+        </div>
 
 
 
 
 
               {/* Formulaire */}
+
 
               <div className="rounded-3xl border border-cyan-500/20 bg-slate-900 p-8 shadow-xl">
 
@@ -1152,10 +1191,11 @@ description="Accompagnement des organisations vers les solutions numériques."
         </section>
 
      </FadeIn>
+     
 
-<footer className="bg-slate-950 py-12">
+ className="bg-slate-950 py-12"
 
-  <div className="mx-auto max-w-6xl">
+   "className="mx-auto max-w-6xl"
 
     <div className="mt-10 grid gap-6 md:grid-cols-3">
 
@@ -1200,32 +1240,24 @@ description="Accompagnement des organisations vers les solutions numériques."
         <FaFacebook size={32} />
       </a>
 
-      <a
-        href="https://wa.me/2250759212322"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="rounded-full bg-slate-900 p-4 text-gray-400 transition hover:bg-green-500 hover:text-white"
-      >
-        <FaWhatsapp size={32} />
-      </a>
+     
 
-    </div>
+</FadeIn>
 
-    <p className="mt-8 text-center text-sm text-gray-500">
-      © 2026 Martial Akaffou. Tous droits réservés.
-    </p>
+{/* Pied de page */}
 
-  </div>
 
-</footer>
+
+{/* Bouton WhatsApp flottant */}
 
 <a
   href="https://wa.me/2250759212322"
   target="_blank"
   rel="noopener noreferrer"
-  className="fixed bottom-6 right-6 z-50 flex h-16 w-16 items-center justify-center rounded-full bg-green-500 text-3xl shadow-xl transition hover:scale-110"
+  aria-label="Contacter Martial Akaffou sur WhatsApp"
+  className="fixed bottom-6 right-6 z-50 flex h-16 w-16 items-center justify-center rounded-full bg-green-500 text-white shadow-xl transition duration-300 hover:scale-110"
 >
-  💬
+  <FaWhatsapp size={34} />
 </a>
 
 </main>
