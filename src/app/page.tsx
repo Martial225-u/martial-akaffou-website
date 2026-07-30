@@ -142,7 +142,7 @@ className="rounded-full mx-auto border-4 border-cyan-400 shadow-xl object-cover"
 
         <div className="mt-8 flex flex-wrap justify-center gap-4">
 <a
-  href="http://localhost:3000/CV-Martial-Akaffou.pdf"
+  href="/cv/CV-Martial-Akaffou.pdf"
   target="_blank"
   rel="noopener noreferrer"
   className="rounded-full bg-cyan-500 px-8 py-3 font-bold text-slate-950 transition hover:bg-cyan-400"
