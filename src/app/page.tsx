@@ -6,20 +6,17 @@ import {
   FaWhatsapp,
   FaLinkedin,
   FaFacebook,
-  FaPhoneAlt,
-  FaEnvelope,
-  FaGlobe,
 } from "react-icons/fa";
 import { Mail, Phone, MapPin, MessageCircle } from "lucide-react";
 import Navbar from "./components/Navbar";
 import ServiceCard from "./components/ServiceCard";
 import ProjectCard from "./components/ProjectCard";
 import WhatsAppButton from "./components/WhatsAppButton";
-import Certificates from "./components/Certificates";
 import Testimonials from "./components/Testimonials";
 import FadeIn from "./components/FadeIn";
 import emailjs from "@emailjs/browser";
 import { useRef, FormEvent } from "react";
+import Certifications from "@/components/Certifications";
 
 export default function Home() {
   const form = useRef<HTMLFormElement>(null);
@@ -148,7 +145,7 @@ className="rounded-full mx-auto border-4 border-cyan-400 shadow-xl object-cover"
   rel="noopener noreferrer"
   className="rounded-full bg-cyan-500 px-8 py-3 font-bold text-slate-950 transition hover:bg-cyan-400"
 >
-  Télécharger mon CV
+  Télécharger mon CV professionnel
 </a>
 
   <a
@@ -774,7 +771,8 @@ technologie, formation et impact social.
   </div>
 
 </section>
-<Certificates />
+<Certifications />
+
       {/* COMPETENCES */}
 
       <section className="bg-slate-950 px-6 py-24">
@@ -845,7 +843,7 @@ technologie, formation et impact social.
 
               <div className="flex justify-between">
                 <h3 className="font-bold">
-                  🚀 Fintech Engineer Fintech & Digital Innovation
+                  🚀 Fintech & Digital Innovation
                 </h3>
                 <span className="text-cyan-400">
                   80%
@@ -1002,21 +1000,14 @@ description="Accompagnement des organisations vers les solutions numériques."
 
 
  <Testimonials />
-
+<Certifications />
 {/* CONTACT */}
-
 <section
   id="contact"
   className="bg-slate-950 px-6 py-24"
 >
 
-<div className="mx-auto grid max-w-6xl gap-12 md:grid-cols-2">
-  {/* CONTACT PREMIUM */}
-
-<section
-  id="contact"
-  className="bg-slate-950 px-6 py-24"
->
+<div className="mx-auto max-w-6xl">
 
 <h2 className="text-center text-4xl font-bold text-cyan-400">
   Contactez-moi
@@ -1027,7 +1018,18 @@ description="Accompagnement des organisations vers les solutions numériques."
   Échangeons ensemble pour construire une solution adaptée.
 </p>
 
-</section>
+
+<div className="mt-12 grid gap-12 md:grid-cols-2">
+  {/* CONTACT PREMIUM */}
+
+<h2 className="text-center text-4xl font-bold text-cyan-400">
+  Contactez-moi
+</h2>
+
+<p className="mx-auto mt-6 max-w-3xl text-center text-lg text-gray-300">
+  Vous avez un projet digital, une formation ou une idée innovante ?
+  Échangeons ensemble pour construire une solution adaptée.
+</p>
 {/* Informations Contact */}
 
 <div className="space-y-6">
