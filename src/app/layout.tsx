@@ -12,41 +12,25 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-  metadataBase: new URL("https://martialakaffou.com" ),
-    openGraph: {
-      images: [
-  {
-    url: "/images/martial.jpg",
-    width: 800,
-    height: 800,
-    alt: "Martial Akaffou",
-  },
-],
-    title:
-      "Martial Akaffou | Digital Marketer - Project Manager - Fintech Engineer",
-    description:
-      "Découvrez le parcours, les projets et les services digitaux de Martial Akaffou.",
-    url: "https://martialakaffou.com",
-    siteName: "Martial Akaffou",
-    locale: "fr_FR",
-    type: "website",
-  },
-  description:
-    "Découvrez Martial Akaffou, Digital Marketer, Project Manager et Fintech Engineer. Expert en transformation digitale, gestion de projets, formation et innovation technologique.",
 
-  icons: {
-    icon: "/favicon.png",
-  },
+export const metadata: Metadata = {
+  metadataBase: new URL("https://martialakaffou.com"),
+
+  title:
+    "Martial Akaffou | Digital Marketer | Project Manager | Fintech & Digital Innovation",
+
+  description:
+    "Martial Akaffou accompagne les entreprises et organisations dans la transformation digitale, le marketing numérique, la gestion de projets et la formation professionnelle.",
 
   keywords: [
     "Martial Akaffou",
-    "Digital Marketing",
-    "Project Management",
+    "Digital Marketer Côte d'Ivoire",
+    "Project Manager Abidjan",
     "Fintech",
-    "Transformation Digitale",
+    "Digital Innovation",
+    "Transformation digitale",
     "Formation professionnelle",
-    "Global Academy",
+    "Global Academy Program",
   ],
 
   authors: [
@@ -56,18 +40,58 @@ export const metadata: Metadata = {
   ],
 
   creator: "Martial Akaffou",
+
+  icons: {
+    icon: "/favicon.png",
+  },
+
+
+  openGraph: {
+    title:
+      "Martial Akaffou | Digital Marketer & Project Manager",
+
+    description:
+      "Découvrez le parcours, les services et les projets digitaux de Martial Akaffou.",
+
+    url: "https://martialakaffou.com",
+
+    siteName: "Martial Akaffou",
+
+    locale: "fr_FR",
+
+    type: "website",
+
+    images: [
+      {
+        url: "/images/martial.jpg",
+        width: 800,
+        height: 800,
+        alt: "Martial Akaffou",
+      },
+    ],
+  },
 };
+
+
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
   return (
     <html
-  lang="fr"
+      lang="fr"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+
+      <body className="min-h-full flex flex-col">
+
+        {children}
+
+      </body>
+
     </html>
   );
 }

@@ -17,6 +17,8 @@ import FadeIn from "./components/FadeIn";
 import emailjs from "@emailjs/browser";
 import { useRef, FormEvent } from "react";
 import Certifications from "./components/Certifications";
+import Timeline from "./components/Timeline";
+import TrustedPartners from "./components/TrustedPartners";
 export default function Home() {
   const form = useRef<HTMLFormElement>(null);
 
@@ -164,6 +166,45 @@ className="rounded-full mx-auto border-4 border-cyan-400 shadow-xl object-cover"
 </div>
 
 </section>
+{/* RÉALISATIONS */}
+
+<section className="bg-slate-950 py-20 border-y border-cyan-500/20">
+  <div className="mx-auto max-w-6xl px-6">
+
+    <div className="grid grid-cols-2 gap-6 md:grid-cols-4">
+
+      <div className="rounded-3xl bg-slate-900 p-8 text-center shadow-xl transition hover:-translate-y-2">
+        <h3 className="text-5xl font-extrabold text-cyan-400">5+</h3>
+        <p className="mt-3 text-gray-300">
+          Années d'expérience
+        </p>
+      </div>
+
+      <div className="rounded-3xl bg-slate-900 p-8 text-center shadow-xl transition hover:-translate-y-2">
+        <h3 className="text-5xl font-extrabold text-cyan-400">10+</h3>
+        <p className="mt-3 text-gray-300">
+          Projets réalisés
+        </p>
+      </div>
+
+      <div className="rounded-3xl bg-slate-900 p-8 text-center shadow-xl transition hover:-translate-y-2">
+        <h3 className="text-5xl font-extrabold text-cyan-400">100+</h3>
+        <p className="mt-3 text-gray-300">
+          Personnes formées
+        </p>
+      </div>
+
+      <div className="rounded-3xl bg-slate-900 p-8 text-center shadow-xl transition hover:-translate-y-2">
+        <h3 className="text-5xl font-extrabold text-cyan-400">4</h3>
+        <p className="mt-3 text-gray-300">
+          Domaines d'expertise
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
 
 {/* A PROPOS */}
 
@@ -288,6 +329,8 @@ technologie, formation et impact social.
   
 
 </section>
+<Timeline />
+
 
       {/* VISION & MISSION */}
 
@@ -957,9 +1000,12 @@ description="Accompagnement des organisations vers les solutions numériques."
 
       </FadeIn>
 
+<TrustedPartners />
 
  <Testimonials />
+
 <Certifications />
+
 {/* CONTACT */}
 <section
   id="contact"
