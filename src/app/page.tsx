@@ -16,8 +16,7 @@ import Testimonials from "./components/Testimonials";
 import FadeIn from "./components/FadeIn";
 import emailjs from "@emailjs/browser";
 import { useRef, FormEvent } from "react";
-import Certifications from "@/components/Certifications";
-
+import Certifications from "./components/Certifications";
 export default function Home() {
   const form = useRef<HTMLFormElement>(null);
 
@@ -286,47 +285,7 @@ technologie, formation et impact social.
     Expérience Professionnelle
   </h2>
 
-  <div className="mt-10 grid gap-6 md:grid-cols-3">
-
-    <div className="rounded-2xl bg-slate-950 p-6 shadow-xl">
-      <h3 className="text-xl font-bold">
-        🌐 Webmate Ghana / Côte d'Ivoire
-      </h3>
-      <p className="mt-3 text-gray-400">
-        Digital Transformation & VSLA Digitization Project
-      </p>
-      <p className="mt-2 text-cyan-400">
-        2025 - 2026
-      </p>
-    </div>
-
-
-    <div className="rounded-2xl bg-slate-950 p-6 shadow-xl">
-      <h3 className="text-xl font-bold">
-        🎓 Hamburg International School Accra
-      </h3>
-      <p className="mt-3 text-gray-400">
-        French Teacher
-      </p>
-      <p className="mt-2 text-cyan-400">
-        2024 - 2026
-      </p>
-    </div>
-
-
-    <div className="rounded-2xl bg-slate-950 p-6 shadow-xl">
-      <h3 className="text-xl font-bold">
-        🏫 New Heights Academy Accra
-      </h3>
-      <p className="mt-3 text-gray-400">
-        French Teacher
-      </p>
-      <p className="mt-2 text-cyan-400">
-        2023 - 2024
-      </p>
-    </div>
-
-  </div>
+  
 
 </section>
 
@@ -1153,20 +1112,14 @@ description="Accompagnement des organisations vers les solutions numériques."
   </button>
 
 </form>
+      </div>
 
+    </div>
 
-      </div>   
+  </div>
 
-          </div>
-
-
-        </section>
-
+</section>
      
-     
-
-
-
   
 
     <div className="mt-10 grid gap-6 md:grid-cols-3">
