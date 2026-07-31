@@ -31,7 +31,7 @@ const sendEmail = (e: FormEvent) => {
 
   emailjs
  .sendForm(
-  "service_rjag7lv",
+  "service_c01rybl",
   "template_261bdac",
   form.current,
   {
@@ -59,7 +59,7 @@ return (
 
       <Navbar />
       
-       className="relative flex min-h-[85vh] flex-col items-center justify-center overflow-hidden px-6 pt-28 text-center"
+       <section className="relative flex min-h-[85vh] flex-col items-center justify-center overflow-hidden px-6 pt-28 text-center">
 
        <motion.div
   animate={{
@@ -105,6 +105,7 @@ className="rounded-full mx-auto border-4 border-cyan-400 shadow-xl object-cover"
 
             </motion.div>
           </div>
+        
 <div className="mb-6 inline-flex items-center rounded-full border border-cyan-400/30 bg-cyan-500/10 px-5 py-2 text-sm font-semibold text-cyan-300">
   🚀 Disponible pour des projets internationaux
 </div>
@@ -158,25 +159,22 @@ className="rounded-full mx-auto border-4 border-cyan-400 shadow-xl object-cover"
   </a>
 
   <a
-    href="#contact"
-    className="rounded-full border border-cyan-400 px-8 py-3 font-bold text-cyan-400 transition hover:bg-cyan-400 hover:text-slate-950"
-  >
-    Me contacter
-  </a>
+  href="#contact"
+  className="rounded-full border border-cyan-400 px-8 py-3 font-bold text-cyan-400 transition hover:bg-cyan-400 hover:text-slate-950"
+>
+  Me contacter
+</a>
 
 </div>
 
+</section>
 
+{/* A PROPOS */}
 
-      <section>
-
-      {/* A PROPOS */}
-
-  
-      <section
-        id="about"
-        className="relative bg-slate-900 px-6 py-24 overflow-hidden"
-      >
+<section
+  id="about"
+  className="relative bg-slate-900 px-6 py-24 overflow-hidden"
+>
 
         <div className="absolute top-0 right-0 h-72 w-72 rounded-full bg-cyan-500/10 blur-3xl"></div>
 
@@ -1003,9 +1001,34 @@ description="Accompagnement des organisations vers les solutions numériques."
       </FadeIn>
 
 
-      <Testimonials />
-    
-     {/* Informations Contact */}
+ <Testimonials />
+
+{/* CONTACT */}
+
+<section
+  id="contact"
+  className="bg-slate-950 px-6 py-24"
+>
+
+<div className="mx-auto grid max-w-6xl gap-12 md:grid-cols-2">
+  {/* CONTACT PREMIUM */}
+
+<section
+  id="contact"
+  className="bg-slate-950 px-6 py-24"
+>
+
+<h2 className="text-center text-4xl font-bold text-cyan-400">
+  Contactez-moi
+</h2>
+
+<p className="mx-auto mt-6 max-w-3xl text-center text-lg text-gray-300">
+  Vous avez un projet digital, une formation ou une idée innovante ?
+  Échangeons ensemble pour construire une solution adaptée.
+</p>
+
+</section>
+{/* Informations Contact */}
 
 <div className="space-y-6">
 
@@ -1130,7 +1153,7 @@ description="Accompagnement des organisations vers les solutions numériques."
 </form>
 
 
-            
+      </div>   
 
           </div>
 
@@ -1166,6 +1189,8 @@ description="Accompagnement des organisations vers les solutions numériques."
       </div>
 
     </div>
+    
+
 
     
 
