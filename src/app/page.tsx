@@ -93,11 +93,11 @@ return (
               >
                <Image
 src="/images/martial.jpg"
-alt="Martial Akaffou"
-width={300}
-height={300}
+alt="Martial Akaffou - Digital Marketer"
+width={320}
+height={320}
 priority
-className="rounded-full mx-auto border-4 border-cyan-400 shadow-xl object-cover"
+className="rounded-full mx-auto border-4 border-cyan-400 shadow-2xl object-cover"
 />
               </motion.div>
 
@@ -171,37 +171,65 @@ className="rounded-full mx-auto border-4 border-cyan-400 shadow-xl object-cover"
 <section className="bg-slate-950 py-20 border-y border-cyan-500/20">
   <div className="mx-auto max-w-6xl px-6">
 
-    <div className="grid grid-cols-2 gap-6 md:grid-cols-4">
+    <p className="mb-10 text-center text-lg text-gray-400">
+Expert en marketing digital, gestion de projets,
+innovation fintech et transformation numérique.
+</p>
 
-      <div className="rounded-3xl bg-slate-900 p-8 text-center shadow-xl transition hover:-translate-y-2">
-        <h3 className="text-5xl font-extrabold text-cyan-400">5+</h3>
-        <p className="mt-3 text-gray-300">
-          Années d'expérience
-        </p>
-      </div>
 
-      <div className="rounded-3xl bg-slate-900 p-8 text-center shadow-xl transition hover:-translate-y-2">
-        <h3 className="text-5xl font-extrabold text-cyan-400">10+</h3>
-        <p className="mt-3 text-gray-300">
-          Projets réalisés
-        </p>
-      </div>
+<div className="grid grid-cols-2 gap-6 md:grid-cols-4">
 
-      <div className="rounded-3xl bg-slate-900 p-8 text-center shadow-xl transition hover:-translate-y-2">
-        <h3 className="text-5xl font-extrabold text-cyan-400">100+</h3>
-        <p className="mt-3 text-gray-300">
-          Personnes formées
-        </p>
-      </div>
+<div className="rounded-3xl bg-slate-900 p-8 text-center shadow-xl transition hover:-translate-y-2">
+<h3 className="text-5xl font-extrabold text-cyan-400">
+5+
+</h3>
 
-      <div className="rounded-3xl bg-slate-900 p-8 text-center shadow-xl transition hover:-translate-y-2">
-        <h3 className="text-5xl font-extrabold text-cyan-400">4</h3>
-        <p className="mt-3 text-gray-300">
-          Domaines d'expertise
-        </p>
-      </div>
+<p className="mt-3 text-gray-300">
+Années d'expérience
+</p>
 
-    </div>
+</div>
+
+
+<div className="rounded-3xl bg-slate-900 p-8 text-center shadow-xl transition hover:-translate-y-2">
+
+<h3 className="text-5xl font-extrabold text-cyan-400">
+10+
+</h3>
+
+<p className="mt-3 text-gray-300">
+Projets réalisés
+</p>
+
+</div>
+
+
+<div className="rounded-3xl bg-slate-900 p-8 text-center shadow-xl transition hover:-translate-y-2">
+
+<h3 className="text-5xl font-extrabold text-cyan-400">
+100+
+</h3>
+
+<p className="mt-3 text-gray-300">
+Personnes formées
+</p>
+
+</div>
+
+
+<div className="rounded-3xl bg-slate-900 p-8 text-center shadow-xl transition hover:-translate-y-2">
+
+<h3 className="text-5xl font-extrabold text-cyan-400">
+4
+</h3>
+
+<p className="mt-3 text-gray-300">
+Domaines d'expertise
+</p>
+
+</div>
+
+</div>
 
   </div>
 </section>
@@ -326,10 +354,12 @@ technologie, formation et impact social.
     Expérience Professionnelle
   </h2>
 
-  
 
 </section>
+
 <Timeline />
+
+
 
 
       {/* VISION & MISSION */}
@@ -773,7 +803,7 @@ technologie, formation et impact social.
   </div>
 
 </section>
-<Certifications />
+
 
       {/* COMPETENCES */}
 
@@ -1025,16 +1055,7 @@ description="Accompagnement des organisations vers les solutions numériques."
 
 
 <div className="mt-12 grid gap-12 md:grid-cols-2">
-  {/* CONTACT PREMIUM */}
 
-<h2 className="text-center text-4xl font-bold text-cyan-400">
-  Contactez-moi
-</h2>
-
-<p className="mx-auto mt-6 max-w-3xl text-center text-lg text-gray-300">
-  Vous avez un projet digital, une formation ou une idée innovante ?
-  Échangeons ensemble pour construire une solution adaptée.
-</p>
 {/* Informations Contact */}
 
 <div className="space-y-6">
@@ -1166,36 +1187,7 @@ description="Accompagnement des organisations vers les solutions numériques."
 
 </section>
      
-  
-
-    <div className="mt-10 grid gap-6 md:grid-cols-3">
-
-      <div className="rounded-xl bg-slate-900 p-6">
-        <h3 className="text-xl font-bold">📞 Téléphone</h3>
-        <p className="mt-3 text-gray-400">
-          +225 07 59 21 23 22
-        </p>
-      </div>
-
-      <div className="rounded-xl bg-slate-900 p-6">
-        <h3 className="text-xl font-bold">📧 Email</h3>
-        <p className="mt-3 text-gray-400">
-          akaffoumartial148@gmail.com
-        </p>
-      </div>
-
-      <div className="rounded-xl bg-slate-900 p-6">
-        <h3 className="text-xl font-bold">💬 WhatsApp</h3>
-        <WhatsAppButton />
-      </div>
-
-    </div>
-    
-
-
-    
-
-
+     
 {/* Pied de page */}
 
 <footer className="bg-slate-950 border-t border-cyan-500/20 py-12">

@@ -14,23 +14,21 @@ const geistMono = Geist_Mono({
 
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://martialakaffou.com"),
-
   title:
     "Martial Akaffou | Digital Marketer | Project Manager | Fintech & Digital Innovation",
 
   description:
-    "Martial Akaffou accompagne les entreprises et organisations dans la transformation digitale, le marketing numérique, la gestion de projets et la formation professionnelle.",
+    "Site officiel de Martial Akaffou, Digital Marketer, Project Manager et spécialiste en Fintech, transformation digitale, formation professionnelle et innovation numérique.",
 
   keywords: [
     "Martial Akaffou",
-    "Digital Marketer Côte d'Ivoire",
-    "Project Manager Abidjan",
+    "Digital Marketing",
+    "Project Management",
     "Fintech",
-    "Digital Innovation",
-    "Transformation digitale",
+    "Transformation Digitale",
     "Formation professionnelle",
-    "Global Academy Program",
+    "Global Academy",
+    "Innovation numérique",
   ],
 
   authors: [
@@ -39,39 +37,59 @@ export const metadata: Metadata = {
     },
   ],
 
-  creator: "Martial Akaffou",
-
-  icons: {
-    icon: "/favicon.png",
-  },
-
+  metadataBase: new URL(
+    "https://martialakaffou.com"
+  ),
 
   openGraph: {
     title:
       "Martial Akaffou | Digital Marketer & Project Manager",
 
     description:
-      "Découvrez le parcours, les services et les projets digitaux de Martial Akaffou.",
+      "Solutions digitales, formation et innovation technologique.",
 
-    url: "https://martialakaffou.com",
+    url:
+      "https://martialakaffou.com",
 
-    siteName: "Martial Akaffou",
-
-    locale: "fr_FR",
-
-    type: "website",
+    siteName:
+      "Martial Akaffou Digital",
 
     images: [
       {
-        url: "/images/martial.jpg",
-        width: 800,
-        height: 800,
-        alt: "Martial Akaffou",
+        url:
+          "/images/martial.jpg",
+
+        width: 320,
+        height: 320,
+
+        alt:
+          "Martial Akaffou - Digital Marketer",
       },
     ],
+
+    locale:
+      "fr_FR",
+
+    type:
+      "website",
+  },
+
+  twitter: {
+    card:
+      "summary_large_image",
+
+    title:
+      "Martial Akaffou | Digital Marketer",
+
+    description:
+      "Digital Marketing, Fintech, Formation et Innovation.",
+
+    images:
+      [
+        "/images/martial.jpg"
+      ],
   },
 };
-
 
 
 export default function RootLayout({
@@ -81,12 +99,11 @@ export default function RootLayout({
 }>) {
 
   return (
-    <html
-      lang="fr"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
-    >
+    <html lang="fr">
 
-      <body className="min-h-full flex flex-col">
+      <body
+        className={`${geistSans.variable} ${geistMono.variable}`}
+      >
 
         {children}
 
