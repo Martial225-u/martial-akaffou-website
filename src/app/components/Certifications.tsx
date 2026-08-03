@@ -1,101 +1,99 @@
 import Image from "next/image";
-
-const certifications = [
-  {
-    title: "International Diploma",
-    subtitle: "Project Leadership & Management",
-    school: "Cambridge International College",
-    year: "2026",
-    image: "/certificates/cambridge-project-management.jpg",
-  },
-  {
-    title: "Certificate in Digital Marketing",
-    subtitle: "Distinction",
-    school: "Perez University College",
-    year: "2023",
-    image: "/certificates/digital-marketing.jpg",
-  },
-  {
-    title: "Certificate of Proficiency",
-    subtitle: "English Language",
-    school: "Perez University College",
-    year: "2023",
-    image: "/certificates/english-language.jpg",
-  },
-  {
-    title: "Leadership Training",
-    subtitle: "Afrique en Mission",
-    school: "Leadership Program",
-    year: "2018",
-    image: "/certificates/leadership.jpg",
-  },
-  {
-    title: "Baccalauréat Série A2",
-    subtitle: "République de Côte d'Ivoire",
-    school: "Enseignement Secondaire",
-    year: "2014",
-    image: "/certificates/baccalaureat.jpg",
-  },
-];
+import { motion } from "framer-motion";
 
 export default function Certifications() {
+  const certificates = [
+    {
+      title: "Gestion de Projet",
+      school: "Global Executive College Accra",
+      year: "2024 - 2025",
+      image: "/certificates/gestion-projet.jpg",
+    },
+    {
+      title: "Digital Marketing",
+      school: "Perez University College Accra",
+      year: "2023 - 2024",
+      image: "/certificates/digital-marketing.jpg",
+    },
+    {
+      title: "Leadership & Formation",
+      school: "Formation professionnelle",
+      year: "2018",
+      image: "/certificates/leadership.jpg",
+    },
+  ];
+
   return (
-    <section
-      id="certifications"
-      className="bg-slate-900 px-6 py-24"
-    >
-      <div className="mx-auto max-w-7xl">
+    <section className="bg-slate-900 px-6 py-24 text-white">
+
+      <div className="mx-auto max-w-6xl">
 
         <h2 className="text-center text-4xl font-bold text-cyan-400">
-          Diplômes & Certifications
+          Mes Certifications
         </h2>
 
-        <p className="mx-auto mt-6 max-w-3xl text-center text-slate-300">
-          Mon parcours académique et professionnel dans les domaines du
-          marketing digital, de la gestion de projet, du leadership et de
-          l'innovation.
+        <p className="mx-auto mt-6 max-w-3xl text-center text-gray-300">
+          Découvrez mes formations professionnelles, certifications
+          et parcours de développement des compétences.
         </p>
 
-        <div className="mt-14 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
 
-          {certifications.map((certification, index) => (
-            <div
+        <div className="mt-12 grid gap-8 md:grid-cols-3">
+
+          {certificates.map((certificate, index) => (
+
+            <motion.div
               key={index}
-              className="overflow-hidden rounded-2xl bg-slate-800 shadow-xl transition duration-300 hover:-translate-y-2 hover:shadow-cyan-500/30"
+              whileHover={{ y: -10 }}
+              className="rounded-3xl border border-cyan-500/20 bg-slate-950 p-6 shadow-xl"
             >
-              <Image
-                src={certification.image}
-                alt={certification.title}
-                width={600}
-                height={400}
-                className="h-64 w-full object-cover"
-              />
 
-              <div className="p-6">
+              <div className="overflow-hidden rounded-xl">
 
-                <h3 className="text-xl font-bold text-white">
-                  {certification.title}
-                </h3>
-
-                <p className="mt-2 text-cyan-400">
-                  {certification.subtitle}
-                </p>
-
-                <p className="mt-3 text-slate-300">
-                  {certification.school}
-                </p>
-
-                <p className="mt-2 text-sm text-slate-400">
-                  {certification.year}
-                </p>
+                <Image
+                  src={certificate.image}
+                  alt={certificate.title}
+                  width={600}
+                  height={400}
+                  className="h-48 w-full object-cover transition duration-500 hover:scale-110"
+                />
 
               </div>
-            </div>
+
+
+              <h3 className="mt-6 text-xl font-bold text-cyan-400">
+                {certificate.title}
+              </h3>
+
+
+              <p className="mt-3 text-gray-300">
+                {certificate.school}
+              </p>
+
+
+              <p className="mt-2 text-gray-400">
+                📅 {certificate.year}
+              </p>
+
+
+             <a
+  href={certificate.image}
+  target="_blank"
+  rel="noopener noreferrer"
+  className="mt-5 inline-block rounded-full border border-cyan-400 px-5 py-2 text-sm font-semibold text-cyan-400 transition hover:bg-cyan-400 hover:text-slate-950"
+>
+  Voir le certificat
+</a>
+
+
+            </motion.div>
+
           ))}
 
         </div>
 
       </div>
+
     </section>
   );
 }

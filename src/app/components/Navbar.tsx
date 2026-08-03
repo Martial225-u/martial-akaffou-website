@@ -20,7 +20,7 @@ export default function Navbar() {
     alt="Martial Akaffou Digital"
     width={55}
     height={55}
-    className="rounded-full"
+  className="object-contain"
   />
 
   <span className="text-2xl font-bold text-cyan-400">
@@ -33,6 +33,12 @@ export default function Navbar() {
         {/* MENU ORDINATEUR */}
 
         <div className="hidden md:flex items-center gap-8 text-white">
+<Link 
+href="/portfolio"
+className="hover:text-cyan-400 transition"
+>
+Portfolio
+</Link>
 
           <a href="#about" className="hover:text-cyan-400 transition">
             À propos
@@ -45,7 +51,12 @@ export default function Navbar() {
           <a href="#projects" className="hover:text-cyan-400 transition">
             Projets
           </a>
-
+<Link
+  href="/cv"
+  className="hover:text-cyan-400 transition"
+>
+  CV
+</Link>
           <a href="#contact" className="hover:text-cyan-400 transition">
             Contact
           </a>
@@ -79,6 +90,13 @@ export default function Navbar() {
       {open && (
 
         <div className="md:hidden bg-slate-950 px-6 pb-6 text-white space-y-4">
+          <a href="#portfolio" className="hover:text-cyan-400 transition">
+  Portfolio
+</a>
+
+<a href="#blog" className="hover:text-cyan-400 transition">
+  Blog
+</a>
 
           <a href="#about" onClick={() => setOpen(false)}>
             À propos
@@ -91,6 +109,12 @@ export default function Navbar() {
           <a href="#projects" onClick={() => setOpen(false)}>
             Projets
           </a>
+          <Link
+  href="/cv"
+  onClick={() => setOpen(false)}
+>
+  CV
+</Link>
 
           <a href="#contact" onClick={() => setOpen(false)}>
             Contact
