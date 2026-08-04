@@ -11,15 +11,12 @@
   import Navbar from "./components/Navbar";
   import ServiceCard from "./components/ServiceCard";
   import ProjectCard from "./components/ProjectCard";
- 
+import Certificates from "./components/Certificates";
   import Testimonials from "./components/Testimonials";
   import FadeIn from "./components/FadeIn";
   import emailjs from "@emailjs/browser";
   import { useRef, FormEvent } from "react";
-  import Certifications from "./components/Certifications";
   import Timeline from "./components/Timeline";
-  import TrustedPartners from "./components/TrustedPartners";
-  import TrustedClients from "./components/TrustedClients";
   import Portfolio from "./components/Portfolio";
   import Stats from "./components/Stats";
   import Blog from "./components/Blog";
@@ -102,6 +99,7 @@
   alt="Martial Akaffou - Digital Marketer"
   width={320}
   height={320}
+  loading="eager"
   priority
   className="rounded-full mx-auto border-4 border-cyan-400 shadow-2xl object-cover"
   />
@@ -375,7 +373,6 @@
 
   <Portfolio />
 
-  <TrustedClients />
 
 
 
@@ -1048,12 +1045,11 @@
 
         </FadeIn>
 
-  <TrustedPartners />
 
   <Testimonials />
 
   <FadeIn>
-    <Certifications />
+    <Certificates />
   </FadeIn>
 
 <Blog />
