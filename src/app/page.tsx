@@ -97,14 +97,13 @@ import Certificates from "./components/Certificates";
                   transition={{ duration: 0.8 }}
                 >
                 <Image
-  src="/images/martial.jpg"
+  src="/images/martial-profile-2026.jpg"
   alt="Martial Akaffou - Digital Marketer"
   width={320}
   height={320}
-  loading="eager"
   priority
   className="rounded-full mx-auto border-4 border-cyan-400 shadow-2xl object-cover"
-  />
+/>
                 </motion.div>
 
               </motion.div>
@@ -1173,7 +1172,7 @@ import Certificates from "./components/Certificates";
 
   <Testimonials />
 
-  <CertificateGallery />
+ <CertificateGallery />
 
   <FadeIn>
     <Certificates />
