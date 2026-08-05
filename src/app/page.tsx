@@ -97,7 +97,7 @@ import Certificates from "./components/Certificates";
                   transition={{ duration: 0.8 }}
                 >
                 <Image
-  src="/images/martial-profile-2026.jpg"
+src="/images/martial-new.jpg?v=2"
   alt="Martial Akaffou - Digital Marketer"
   width={320}
   height={320}
