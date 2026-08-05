@@ -21,6 +21,8 @@ import Certificates from "./components/Certificates";
   import Stats from "./components/Stats";
   import Blog from "./components/Blog";
   import Link from "next/link";
+  import AnimatedCounter from "./components/AnimatedCounter";
+  import CertificateGallery from "./components/CertificateGallery";
   
   export default function Home() {
     const form = useRef<HTMLFormElement>(null);
@@ -190,9 +192,10 @@ import Certificates from "./components/Certificates";
   <div className="grid grid-cols-2 gap-6 md:grid-cols-4">
 
   <div className="rounded-3xl bg-slate-900 p-8 text-center shadow-xl transition hover:-translate-y-2">
-  <h3 className="text-5xl font-extrabold text-cyan-400">
-  5+
-  </h3>
+
+ <h3 className="text-5xl font-extrabold text-cyan-400">
+  <AnimatedCounter value={5} suffix="+" />
+</h3>
 
   <p className="mt-3 text-gray-300">
   Années d'expérience
@@ -203,9 +206,9 @@ import Certificates from "./components/Certificates";
 
   <div className="rounded-3xl bg-slate-900 p-8 text-center shadow-xl transition hover:-translate-y-2">
 
-  <h3 className="text-5xl font-extrabold text-cyan-400">
-  10+
-  </h3>
+<h3 className="text-5xl font-extrabold text-cyan-400">
+  <AnimatedCounter value={10} suffix="+" />
+</h3>
 
   <p className="mt-3 text-gray-300">
   Projets réalisés
@@ -216,9 +219,9 @@ import Certificates from "./components/Certificates";
 
   <div className="rounded-3xl bg-slate-900 p-8 text-center shadow-xl transition hover:-translate-y-2">
 
-  <h3 className="text-5xl font-extrabold text-cyan-400">
-  100+
-  </h3>
+ <h3 className="text-5xl font-extrabold text-cyan-400">
+  <AnimatedCounter value={100} suffix="+" />
+</h3>
 
   <p className="mt-3 text-gray-300">
   Personnes formées
@@ -230,8 +233,8 @@ import Certificates from "./components/Certificates";
   <div className="rounded-3xl bg-slate-900 p-8 text-center shadow-xl transition hover:-translate-y-2">
 
   <h3 className="text-5xl font-extrabold text-cyan-400">
-  4
-  </h3>
+  <AnimatedCounter value={4} />
+</h3>
 
   <p className="mt-3 text-gray-300">
   Domaines d'expertise
@@ -254,6 +257,8 @@ import Certificates from "./components/Certificates";
           <div className="absolute top-0 right-0 h-72 w-72 rounded-full bg-cyan-500/10 blur-3xl"></div>
 
           <div className="mx-auto grid max-w-6xl gap-12 md:grid-cols-2 items-center">
+
+            
 
             {/* Texte */}
             <div>
@@ -356,6 +361,123 @@ import Certificates from "./components/Certificates";
           
 
         </section>
+
+        {/* POURQUOI TRAVAILLER AVEC MOI */}
+
+<FadeIn>
+
+<section className="bg-slate-950 px-6 py-24">
+
+  <div className="mx-auto max-w-6xl">
+
+    <h2 className="text-center text-4xl font-bold text-cyan-400">
+      Pourquoi travailler avec moi ?
+    </h2>
+
+    <p className="mx-auto mt-6 max-w-3xl text-center text-lg text-gray-300">
+      Une expertise construite entre technologie, formation,
+      gestion de projets et transformation digitale.
+    </p>
+
+
+    <div className="mt-12 grid gap-8 md:grid-cols-4">
+
+
+      <motion.div
+        whileHover={{ y:-10 }}
+        className="rounded-3xl border border-cyan-500/20 bg-slate-900 p-8 shadow-xl"
+      >
+
+        <div className="text-5xl">
+          🌍
+        </div>
+
+        <h3 className="mt-6 text-xl font-bold text-cyan-400">
+          Expérience internationale
+        </h3>
+
+        <p className="mt-4 text-gray-300">
+          Une expérience professionnelle entre la Côte d'Ivoire
+          et le Ghana dans des environnements multiculturels.
+        </p>
+
+      </motion.div>
+
+
+
+      <motion.div
+        whileHover={{ y:-10 }}
+        className="rounded-3xl border border-cyan-500/20 bg-slate-900 p-8 shadow-xl"
+      >
+
+        <div className="text-5xl">
+          💻
+        </div>
+
+        <h3 className="mt-6 text-xl font-bold text-cyan-400">
+          Expertise digitale
+        </h3>
+
+        <p className="mt-4 text-gray-300">
+          Marketing digital, transformation numérique,
+          outils technologiques et innovation.
+        </p>
+
+      </motion.div>
+
+
+
+      <motion.div
+        whileHover={{ y:-10 }}
+        className="rounded-3xl border border-cyan-500/20 bg-slate-900 p-8 shadow-xl"
+      >
+
+        <div className="text-5xl">
+          📊
+        </div>
+
+        <h3 className="mt-6 text-xl font-bold text-cyan-400">
+          Gestion de projets
+        </h3>
+
+        <p className="mt-4 text-gray-300">
+          Planification, coordination et accompagnement
+          des projets innovants.
+        </p>
+
+      </motion.div>
+
+
+
+      <motion.div
+        whileHover={{ y:-10 }}
+        className="rounded-3xl border border-cyan-500/20 bg-slate-900 p-8 shadow-xl"
+      >
+
+        <div className="text-5xl">
+          🎓
+        </div>
+
+        <h3 className="mt-6 text-xl font-bold text-cyan-400">
+          Transmission & Leadership
+        </h3>
+
+        <p className="mt-4 text-gray-300">
+          Formation, accompagnement des personnes
+          et développement des compétences.
+        </p>
+
+      </motion.div>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+</FadeIn>
+
         {/* EXPERIENCE PROFESSIONNELLE */}
 
   <section className="py-16">
@@ -381,7 +503,10 @@ import Certificates from "./components/Certificates";
 
         <FadeIn>
 
-          <section className="bg-slate-950 px-6 py-24">
+          <section
+  id="why-me"
+  className="bg-slate-950 px-6 py-24"
+>
 
             <div className="mx-auto max-w-6xl">
 
@@ -1047,6 +1172,8 @@ import Certificates from "./components/Certificates";
 
 
   <Testimonials />
+
+  <CertificateGallery />
 
   <FadeIn>
     <Certificates />
