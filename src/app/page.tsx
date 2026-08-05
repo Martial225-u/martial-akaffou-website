@@ -96,8 +96,8 @@ import Certificates from "./components/Certificates";
                   animate={{ scale: 1 }}
                   transition={{ duration: 0.8 }}
                 >
-                <Image
-src="/images/martial-new.jpg?v=2"
+  <Image
+  src="/images/martial-profile.jpg"
   alt="Martial Akaffou - Digital Marketer"
   width={320}
   height={320}
